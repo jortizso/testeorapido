@@ -1,0 +1,305 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(100deg, #5e29b9, #823dc9, #8338df, #74299f, #8c3be9);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    box-sizing: border-box;
+
+}
+
+/* Estilo del scrollbar */
+*::-webkit-scrollbar {
+    width: 10px;
+    /* Ancho del scrollbar */
+}
+
+/* Track del scrollbar (el fondo detrás del thumb) */
+*::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Color de fondo */
+}
+
+/* Thumb del scrollbar (el deslizador) */
+*::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color del thumb */
+    border-radius: 5px;
+    /* Borde redondeado del thumb */
+}
+
+/* Hover sobre el thumb */
+*::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Cambio de color al hacer hover */
+}
+
+
+*::selection {
+    background-color: #6200ff;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #333;
+    margin: 0;
+}
+
+h1 img {
+    width: 3rem;
+    position: relative;
+    top: 8px;
+    left: -5px;
+}
+
+header p {
+    position: relative;
+    text-align: center;
+    margin: auto;
+}
+
+main {
+    margin-bottom: 20px;
+}
+
+.data {
+    margin-left: 30px;
+    width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.data h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 0;
+}
+
+.data-table {
+    margin-left: 20px;
+    line-height: 2;
+    overflow-x: auto;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Estilo para botón */
+.button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+/* Media queries para diseño responsivo */
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    h1 img {
+        width: 2rem;
+    }
+
+    .data h2 {
+        font-size: 20px;
+    }
+}
+
+/* Estilos para la notificación */
+.notification {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+#copyButton {
+    position: relative;
+    text-decoration: none;
+    top: 1px;
+    left: 5px;
+    cursor: pointer;
+}
+
+#copyButton i {
+    font-size: 20px;
+    position: relative;
+    top: -1px;
+}
+
+.notification {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.auth {
+    display: none;
+}
+
+.data {
+    display: none;
+}
+
+.notification {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.auth {
+    display: none;
+}
+
+.data {
+    display: none;
+}
+
+.container {
+    width: fit-content;
+}
+
+.auth {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    color: #333;
+    margin: auto;
+    margin-top: -50px;
+}
+
+.auth h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.auth p {
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.auth input[type="email"],
+.auth input[type="password"] {
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: .3s;
+    border-bottom: 1px solid #808080;
+}
+
+.authinput[type="email"]:hover,
+.auth input[type="password"]:hover {
+    border-bottom: 1px solid #5d00ff;
+}
+
+.auth input[type="email"]:focus,
+.auth input[type="password"]:focus {
+    border-bottom: 1px solid #5d00ff;
+}
+
+.auth input[type="submit"],
+.auth button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5d00ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.auth input[type="submit"]:hover,
+.auth button:hover {
+    background-color: #370095;
+}
+
+.auth input[type="submit"]:focus,
+.auth button:focus {
+    background-color: #370095;
+}
+
+.auth button {
+    margin-top: 20px;
+}
+
+
+.error-message {
+    display: none;
+    color: red;
+    position: relative;
+    top: 10px;
+}
+
+

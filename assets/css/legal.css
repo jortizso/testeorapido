@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --padding-container: 100px 0;
+    --color-title: #5213ff;
+    --color-hover: #7751e0;
+    --color-text: #1f1f1f;
+    --color-background: #f5f5f5;
+    --d: 700ms;
+    --e: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+body {
+    color: var(--color-text);
+    line-height: 2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav {
+    border-bottom: 1px solid #808080;
+    margin-top: 10px !important;
+}
+
+footer .nav {
+    border: none;
+}
+
+.nav__link--menu .nav__links {
+    color: #808080 !important;
+}
+
+.nav__link--menu .nav__links:hover {
+    color: var(--color-hover) !important;
+}
+
+.publica {
+    border: 1px solid #808080 !important;
+}
+
+.publica:hover {
+    border: 1px solid var(--color-title) !important;
+}
+
+.seccion1 {
+    width: 80%;
+    margin: 10px auto;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.titulo__sect {
+    text-align: center;
+    margin: 0 !important;
+    color: var(--color-title) !important;
+}
+
+.introduccion {
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sub {
+    color: var(--color-title);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.indice__box {
+    background-color: var(--color-background);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.766);
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+    padding: 30px;
+}
+
+.indice {
+    margin: auto;
+    width: fit-content;
+    color: var(--color-title);
+}
+
+.indice a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color var(--d) var(--e);
+}
+
+.indice a:hover {
+    color: var(--color-hover);
+}
+
+.definiciones__box {
+    margin: auto;
+    width: 100%;
+    padding: 30px;
+    box-shadow: none;
+    background-color: #fff;
+}
+
+.definiciones {
+    margin: auto;
+    max-width: 800px;
+    width: 100%;
+    width: fit-content;
+}
+
+#definiciones {
+    max-width: 600px;
+}
+
+.definiciones li {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: square;
+    color: #5213ff;
+}
+
+ul p {
+    color: var(--color-text);
+}
+
+.articles__box {
+    margin: auto;
+}
+
+.articles__box .sub {
+    margin: 0 !important;
+}
+
+.articles__box p {
+    padding: 10px;
+}
+
+a {
+    color: var(--color-title);
+    transition: .3s;
+}
+
+a:hover {
+    color: var(--color-hover);
+}
+
+h4 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--color-title);
+}
+
+#normas-de-conducta p {
+    padding: 0;
+}
+
+.normas__sub {
+    text-align: center;
+}
+
+#responsabilidad h4,
+#derechos-y-obligaciones h4,
+#terminacion-de-servicio h4,
+#normas-de-conducta h4,
+#modificaciones h4,
+#contacto h4,
+#ley-aplicable h4 {
+    text-align: justify;
+}
+
+b {
+    color: #5213ff;
+}
+
+@media only screen and (max-width: 768px) {
+    .seccion1 {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .indice__box {
+        max-width: 90%;
+    }
+
+    .definiciones__box {
+        padding: 20px;
+    }
+
+    .definiciones {
+        max-width: 90%;
+    }
+
+    #definiciones {
+        max-width: 90%;
+    }
+
+    .articles__box p {
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    * {
+        text-align: justify;
+    }
+
+    footer nav li,
+    footer .footer__social {
+        text-align: center;
+    }
+
+    .indice__box {
+        box-shadow: none;
+    }
+
+    .seccion1 {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .indice__box {
+        max-width: 95%;
+    }
+
+    .definiciones__box {
+        padding: 15px;
+    }
+
+    .definiciones {
+        max-width: 95%;
+    }
+
+    #definiciones {
+        max-width: 95%;
+    }
+
+    .seccion1 {
+        padding: 10px;
+    }
+
+    h4 {
+        font-size: .8rem;
+        text-align: center !important;
+    }
+
+    p,
+    b,
+    h2,
+    li {
+        font-size: .7rem !important;
+    }
+
+    .sub,
+    .titulo__sect {
+        font-size: 1rem !important;
+        text-align: center;
+    }
+
+    .indice__box {
+        padding: 0;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .nav__link--menu .nav__links {
+        color: #ffffff !important;
+    }
+
+    .nav__link--menu .nav__links:hover {
+        color: #ffffff !important;
+    }
+}
+
+strong {
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+
+.nav__img {
+    top: 20px !important;
+}
+
+@media (max-width:800px) {
+    .nav__logo img {
+        width: 10rem !important;
+        position: relative;
+        left: -5px !important;
+    }
+}

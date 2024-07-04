@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éxtasis | Panel de Control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c15b744a04.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="../index.html"><img src="../images/logo.png" alt="logo"></a>Panel de Control</h1>
+            <p>Suscritos al aviso de ExtaZone</p>
+        </header>
+        <main>
+            <section class="auth">
+                <h2>Iniciar sesión</h2>
+                <form id="loginForm">
+                    <input type="email" id="email" placeholder="Correo electrónico" required>
+                    <input type="password" id="password" placeholder="Contraseña" required>
+                    <div class="g-recaptcha" data-sitekey="6LegPespAAAAANAwb8jEtCzotwo4LmFRirKYXHT3"></div>
+                    <button type="submit">Iniciar sesión</button>
+                </form>
+                <!-- Agregar el div para mostrar mensajes de error -->
+                <div id="loginError" class="error-message"></div>
+            </section>
+            <section class="data">
+                <h2><a id="copyButton">Suscritos <i class="far fa-copy" aria-hidden="true"></i></a></h2>
+                <!-- Notificación -->
+                <div class="notification" id="notification">Los correos electrónicos han sido copiados al portapapeles.
+                </div>
+                <div class="data-table" id="data-table">
+                    <!-- Aquí se agregarán los datos dinámicamente -->
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Éxtasis - Panel de Control © 2024</p>
+        </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

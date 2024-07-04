@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es-PY">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#5213ff">
+    <meta name="content-language" content="es-PY">
+    <meta name="language" content="es">
+    <meta name="title" content="Éxtasis Paraguay">
+    <meta name="description"
+        content="Los mejores anuncios eróticos del Paraguay. Encontrá servicios de entretenimiento para adultos, citas, y acompañantes en Asunción, Central, y Alto Paraná. Placer y discreción garantizados.">
+    <meta name="keywords"
+        content="anuncios eróticos Paraguay, servicios eróticos Paraguay, entretenimiento para adultos Paraguay, citas adultas Paraguay, acompañantes Paraguay, anuncios de escorts Paraguay, anuncios para adultos Paraguay, servicios para adultos Paraguay, mejores anuncios eróticos Paraguay, Éxtasis Paraguay, contactos adultos Paraguay, encuentros eróticos Paraguay, experiencias íntimas Paraguay, anuncios para citas Paraguay, mujeres escorts Paraguay, anuncios de acompañantes Paraguay, servicios de acompañantes Paraguay, placer y compañía Paraguay, servicios discretos Paraguay, placer adulto Paraguay, experiencias eróticas Paraguay, contacto para adultos en Paraguay, servicios de citas eróticas Paraguay, encuentros discretos Paraguay, servicios premium para adultos Paraguay, mejores servicios eróticos en Paraguay, mujeres bellas Paraguay, compañía íntima Paraguay, placer garantizado Paraguay, satisfacción asegurada Paraguay, encuentros íntimos Paraguay, entretenimiento exclusivo para adultos Paraguay, anuncios para adultos verificados Paraguay, anuncios eróticos seguros Paraguay, servicios adultos confiables Paraguay, citas eróticas Paraguay, compañía adulta profesional Paraguay, anuncios premium eróticos Paraguay, placer y diversión Paraguay, acompañantes profesionales Paraguay, servicios de calidad Paraguay, experiencias únicas Paraguay, servicios de entretenimiento para adultos en Paraguay, mejores acompañantes en Paraguay, placer y discreción Paraguay, anuncios de servicios eróticos Paraguay, placer y diversión garantizados Paraguay, experiencias íntimas y eróticas Paraguay, citas discretas y profesionales Paraguay, Asunción, Central, Alto Paraná">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://extasis.com.py">
+    <meta property="og:title" content="Éxtasis Paraguay">
+    <meta property="og:description"
+        content="Los mejores anuncios eróticos del Paraguay. Encontrá servicios de entretenimiento para adultos, citas, y acompañantes en Asunción, Central, y Alto Paraná. Placer y discreción garantizados.">
+    <meta property="og:image"
+        content="https://firebasestorage.googleapis.com/v0/b/publicar-anuncio.appspot.com/o/directories%2F20240624_222245.jpg?alt=media">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://extasis.com.py">
+    <meta property="twitter:title" content="Éxtasis Paraguay">
+    <meta property="twitter:description"
+        content="Los mejores anuncios eróticos del Paraguay. Encontrá servicios de entretenimiento para adultos, citas, y acompañantes en Asunción, Central, y Alto Paraná. Placer y discreción garantizados.">
+    <meta property="twitter:image"
+        content="https://firebasestorage.googleapis.com/v0/b/publicar-anuncio.appspot.com/o/directories%2F20240624_222245.jpg?alt=media">
+
+    <title>Éxtasis | Encuentros eróticos en Paraguay</title>
+    <link rel="shortcut icon" href="./assets/images/fuego.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title"><a href=""><img src="assets/images/logo.png" alt="logo"></a></h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="escorts/" class="nav__links">Escorts</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#lomejor" class="nav__links">Zonas</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#ExtaZone" class="nav__links">ExtaZone</a>
+                </li>
+                <li class="nav__items">
+                    <a href="publicar/" class="nav__links publica">Publica tu anuncio</a>
+                </li>
+
+                <img src="./assets/images/x.png" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./assets/images/menu.png" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">Explorá <span class="color">pasiones</span> sin límites</h1>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Filtrar por zona" onclick="showFilters()" readonly>
+            </div>
+
+            <div id="filterModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeFilters()">&times;</span>
+                    <h3 class="subtitle subtitle__modal">¿Qué <span>buscas?</span></h3>
+                    <label for="zone"></label>
+                    <select id="zone" onchange="updateUrl()">
+                        <option value="">Seleccione una zona</option>
+                        <option value="asuncion">Asunción</option>
+                        <option value="central">Central</option>
+                        <option value="altoparana">Alto Paraná</option>
+                    </select>
+                    <button onclick="applyFilters()">Aplicar</button>
+                </div>
+            </div>
+
+            <div class="flechita">
+                <a href="#lomejor" class="flecha">
+                    <img src="assets/images/flecha-hacia-abajo.png" alt="Flecha hacia abajo">
+                </a>
+            </div>
+
+        </section>
+    </header>
+
+    <!-- Modal de advertencia de contenido +18 -->
+    <div id="ageWarningModal_warning" class="modal_warning">
+        <div class="modal-content_warning">
+            <img src="assets/images/warning.png" alt="Warning Icon" class="warning-icon_warning">
+            <h4>Advertencia de <span>Contenido +18</span></h4>
+            <p>Este sitio contiene material para adultos y está dirigido a personas mayores de 18 años. Al ingresar a
+                este
+                sitio, confirmas que tenés la edad legal para ver contenido para adultos y aceptas nuestros <a
+                    href="legal/terminos-y-condiciones.html">Términos
+                    y Condiciones.</a></p>
+            <div class="buttons-container_warning">
+                <button class="accept-button_warning" onclick="acceptAgeWarning_warning()">Aceptar</button>
+                <a href="https://google.com">
+                    <button class="exit-button_warning">Salir</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <h3 id="lomejor" class="subtitle lomejor">Todo lo mejor <span>para vos</span></h3>
+
+        <div class="container__options">
+            <div class="box__options escorts-central">
+                <h3>Las mejores escorts de Central</h3>
+                <a href="escorts/central/">Explorar</a>
+            </div>
+            <div class="box__options escorts-asuncion">
+                <h3>Las mejores escorts de Asunción</h3>
+                <a href="escorts/asuncion/">Explorar</a>
+            </div>
+            <div class="box__options escorts-altoparana">
+                <h3>Las mejores escorts de Alto Paraná</h3>
+                <a href="escorts/altoparana/">Explorar</a>
+            </div>
+        </div>
+
+        <section class="posibilidades">
+            <div class="cuotas">
+                <img src="assets/images/cuotas.png" alt="cuotas" class="cuotas-img">
+                <h3 class="cuotas-text visible">¡Pagá en <span>cuotas!</span>
+                    <p>Con nosotros, podés disfrutar de la comodidad de pagar tu escort en cuotas con tu tarjeta.
+                        <b>
+                            Aprovechá esta oportunidad y viví una experiencia única con total flexibilidad financiera.
+                        </b>
+                    </p>
+                </h3>
+                <h3 class="cuotas-text invisible">¡Pagá en cuotas!
+                    <p>Con nosotros, podés disfrutar de la comodidad de pagar tu escort en cuotas con tu tarjeta.
+                    </p>
+                </h3>
+                <h3 class="cuotas-text invisibleDos">¡Pagá en cuotas!
+                    <p>Disfrutá de pagar tu escort en cuotas con tu tarjeta.
+                    </p>
+                </h3>
+            </div>
+            <div class="cuotas">
+                <h3 class="bolt-text visible">¡Recibíla en <span class="bolt">Bolt!</span>
+                    <p>
+                        Disfrutá de la comodidad y rapidez de recibirla directamente por Bolt a tu domicilio,
+                        <b> para una
+                            experiencia más conveniente y eficiente.</b>
+                    </p>
+                </h3>
+
+                <h3 class="bolt-text invisible">¡Recibíla el <span class="bolt">Bolt!</span>
+                    <p>
+                        Disfrutá de la comodidad y rapidez de recibirla directamente por Bolt a tu domicilio.
+                    </p>
+                </h3>
+                <h3 class="bolt-text invisibleDos">¡Recibíla en <span class="bolt">Bolt!</span>
+                    <p>
+                        Recibíla directamente por Bolt a tu domicilio.
+                    </p>
+                </h3>
+                <img src="assets/images/bolt.png" alt="bolt" class="bolt-img">
+            </div>
+        </section>
+
+        <section class="pagos">
+            <iframe class="metodos-de-pago" src="assets/frames/pagos.html" frameborder="0"></iframe>
+            <!-- <h3 class="subtitle">¡Con nosotros podés pagar tu escort a cuotas!</h3> -->
+        </section>
+
+        <section class="knowledge">
+            <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                    <h2 class="subtitle">La mejor plataforma de <span>encuentros eróticos</span> del Paraguay</h2>
+                    <p class="knowledge__paragraph">
+                        Servimos como intermediarios transparentes para coordinar reuniones entre clientes y
+                        anunciantes, garantizando la seguridad y el bienestar de ambas partes y previniendo estafas y
+                        delitos sexuales.
+                    </p>
+                    <a href="#como-operamos" class="cta">Leer más</a>
+                </div>
+
+                <figure class="knowledge__picture macb">
+                    <img src="./assets/images/macbook.png" class="knowledge__img">
+                </figure>
+            </div>
+        </section>
+
+        <section class="proximamente" id="ExtaZone">
+            <div class="content-prox">
+                <p class="miniText">ExtaZone | Contenido y Fans</p>
+                <h2>Próximamente</h2>
+                <p>Suscribite para recibir una notificación en cuanto este sitio esté disponible.</p>
+                <form id="subscribeForm" action="#" method="post">
+                    <input type="email" id="email" name="email" placeholder="Tu correo electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+
+            <div class="notification" id="successNotification">Te notificaremos cuando en cuanto este sitio esté
+                disponible.</div>
+            <div class="notification" id="errorNotification">Hubo un error al procesar tu solicitud. Por favor,
+                inténtalo de nuevo más tarde.</div>
+        </section>
+
+        <section class="price container" id="planes">
+            <h2 class="subtitle">Destaca y alcanza el <span>top #1</span> con nuestros planes</h2>
+
+            <div class="price__table">
+                <div class="price__element">
+                    <p class="price__name">Anuncio estándar</p>
+                    <h3 class="price__price">Gratis</h3>
+
+                    <div class="price__items">
+                        <p class="price__features">✓ 1 foto</p>
+                        <p class="price__features"></p>
+                        <p class="price__features">✓ Descripción básica</p>
+                        <p class="price__features"></p>
+                        <p class="price__features">✓ Publicación estándar</p>
+                        <p class="price__features"></p>
+                    </div>
+
+                    <a href="publicar/" class="price__cta">Publicar</a>
+                </div>
+
+
+                <div class="price__element price__element--best">
+                    <p class="price__name">Anuncio Diamante</p>
+                    <h3 class="price__price">30.000Gs</h3>
+
+                    <div class="price__items">
+                        <p class="price__features">✓ 6 fotos</p>
+                        <p class="price__features">✓ Posicionamiento arriba</p>
+                        <p class="price__features">✓ Insignia Diamante</p>
+                        <p class="price__features">✓ Duración de 1 semana</p>
+                        <p class="price__features">✓ Difusión en redes sociales</p>
+                        <p class="price__features">✓ Destaque de color</p>
+                    </div>
+
+                    <a target="_blank"
+                        href="https://wa.me/595983293074/?text=Hola! Estoy interesada en obtener más información sobre el *Plan Diamante* para anuncios en *Éxtasis Paraguay.*"
+                        class="price__cta">Comprar</a>
+                </div>
+
+
+                <div class="price__element">
+                    <p class="price__name">Anuncio Oro</p>
+                    <h3 class="price__price">20.000Gs</h3>
+
+                    <div class="price__items">
+                        <p class="price__features">✓ 4 fotos</p>
+                        <p class="price__features">✓ Posicionamiento arriba</p>
+                        <p class="price__features">✓ Insignia Oro</p>
+                        <p class="price__features">✓ Duración de 3 días</p>
+                        <p class="price__features">✓ Destaque de color</p>
+                    </div>
+
+                    <a target="_blank"
+                        href="https://wa.me/595983293074/?text=Hola! Estoy interesada en obtener más información sobre el *Plan Oro* para anuncios en *Éxtasis Paraguay.*"
+                        class="price__cta">Comprar</a>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="container about" id="como-operamos">
+            <h2 class="subtitle">¿Cómo <span>operamos?</span></h2>
+            <p class="about__paragraph paragraph__sub">
+                Utilizamos un simple método de custodia llamado <span>Escrow</span> para garantizar un proceso exitoso,
+                transparente y libre de fraudes.
+            </p>
+
+            <div class="about__main">
+                <article class="about__icons">
+                    <img src="./assets/images/recibir.png" class="about__icon">
+                    <h3 class="about__title">Pago Completo</h3>
+                    <p class="about__paragraph">
+                        El cliente realiza el pago completo a una cuenta de custodia como medida de seguridad para
+                        prevenir posibles estafas.
+                    </p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./assets/images/verificacion.png" class="about__icon">
+                    <h3 class="about__title">Confirmación</h3>
+                    <p class="about__paragraph">
+                        Después del encuentro, tanto el cliente como la anunciante confirman que se completó el servicio
+                        satisfactoriamente.
+                    </p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./assets/images/transferencia.png" class="about__icon">
+                    <h3 class="about__title">Transferencia</h3>
+                    <p class="about__paragraph">
+                        Una vez confirmada la satisfacción del cliente, el pago se transfiere a la
+                        anunciante desde la cuenta de custodia transcurridas 24hs.
+                    </p>
+                </article>
+            </div>
+            <p class="about__paragraph paragraph__sub paragraph__description">
+                Operamos utilizando un método de custodia llamado <span>Escrow</span> para garantizar un proceso
+                transparente y seguro. En
+                primer lugar, el cliente realiza el <span>pago completo</span> a una cuenta de custodia para
+                prevenir posibles estafas. Después del encuentro, tanto el cliente como la anunciante confirman que
+                <span>el servicio se completó satisfactoriamente.</span>
+                Una vez confirmada la satisfacción del cliente, el pago se transfiere a la anunciante
+                desde la cuenta de custodia reteniendo una pequeña comisión del 10%.
+            </p>
+
+            <div class="about__main">
+                <article class="about__icons">
+                    <img src="./assets/images/verificado.png" class="about__icon">
+                    <h3 class="about__title">Seguridad</h3>
+                    <p class="about__paragraph">
+                        El cliente tiene la garantía de que su pago está protegido hasta que se complete el servicio,
+                        mientras que la anunciante tiene la seguridad de que recibirá el pago correspondiente una vez
+                        que se haya verificado la satisfacción del cliente.
+                    </p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./assets/images/transparente.png" class="about__icon">
+                    <h3 class="about__title">Transparencia</h3>
+                    <p class="about__paragraph">
+                        Implica una secuencia clara de pasos en los que tanto el cliente como la anunciante participan
+                        activamente en cada etapa. Nosotros coordinamos la comunicación hasta el momento del encuentro y
+                        notificamos cuando se recibe el pago, asegurando así una gestión clara y confiable de todos los
+                        procesos. </p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./assets/images/guarani.png" class="about__icon">
+                    <h3 class="about__title">Comisión</h3>
+                    <p class="about__paragraph">
+                        Retenemos una comisión del 10% del monto total acordado entre el cliente y la anunciante. Esta
+                        retención se realiza para cubrir los servicios proporcionados por el método de custodia Escrow y
+                        garantizar la seguridad y eficiencia de la transacción.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="que__esperas">
+            <h3 class="subtitle">¿Qué <span>esperas?</span></h3>
+            <p class="unete">
+                Descubrí un mundo de pasión y conexión, donde cada clic es una puerta hacia experiencias ardientes y
+                encuentros emocionantes. ¡Encontrá tu camino hacia el éxtasis!
+            </p>
+            <div class="botones">
+                <a href="escorts/" class="btn-1"><img src="assets/images/fire.png" alt="fire"> Explorar más</a>
+                <a href="publicar/" class="btn-2"><img src="assets/images/beso.png" alt="labios"> Publica tu anuncio</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <a href="index.html">
+                    <img class="footer__title" src="assets/images/logo.png" alt="logo">
+                </a>
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="index.html" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="legal/terminos-y-condiciones.html" class="nav__links">Términos y Condiciones </a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="legal/politica-de-privacidad.html" class="nav__links">Política de Privacidad</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="legal/politica-de-comisiones-y-pagos.html" class="nav__links">Política de Comisiones y
+                            Pagos</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="legal/politica-de-contenido-y-uso-aceptable.html" class="nav__links">Política de
+                            Contenido y Uso Aceptable</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="legal/descargo-de-responsabilidad.html" class="nav__links">Descargo de
+                            Responsabilidad</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="mailto:hola@extasis.com.py" class="nav__links">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="metodos__pago">
+                <img src="assets/images/rta.png" alt="">
+            </div>
+        </section>
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a target="_blank" href="https://instagram.com/extasis__py" class="footer__icons"><img src="./assets/images/instagram.png" class="footer__img"></a>
+                <a target="_blank" href="https://wa.me/595983293074" class="footer__icons"><img src="./assets/images/whatsapp.png" class="footer__img"></a>
+                <a target="_blank" href="mailto:contacto@extasis.com.py" class="footer__icons"><img src="./assets/images/telegram.png"
+                        class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">&copy; 2024 Éxtasis</h3>
+        </section>
+    </footer>
+
+    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/filtro.js"></script>
+    <script src="./assets/js/warningModal.js"></script>
+    <script type="module" src="./assets/js/sub.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"></script>
+</body>
+
+</html>

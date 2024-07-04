@@ -1,0 +1,619 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.box__orig {
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: fit-content;
+    color: #444;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+.buy__orig {
+    padding-top: 1rem;
+}
+
+.contratar__orig {
+    color: var(--color-title);
+    background-color: #fff;
+    border: 1px solid var(--color-title);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: .3s ease;
+    font-size: 1.2rem;
+    cursor: pointer;
+    /* Añadido para cambiar el cursor */
+}
+
+.contratar__orig:hover {
+    color: #fff;
+    background-color: #5213ff;
+}
+
+.contratar__orig img {
+    width: 23px;
+    position: relative;
+    top: 5px;
+    transition: .3s;
+    pointer-events: none;
+    /* Evita que la imagen dentro del botón sea clickable */
+}
+
+.contratar__orig:hover>img {
+    filter: brightness(100);
+}
+
+.reportar {
+    border: 1px solid #5213ff;
+    color: #fff;
+    background-color: #5213ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .3s ease;
+    font-size: 1rem;
+    position: relative;
+    top: 5px;
+    margin-left: 10px;
+    text-align: center;
+    cursor: pointer;
+    /* Añadido para cambiar el cursor */
+}
+
+.reportar:hover {
+    color: #fff;
+    border: 1px solid #7751e0;
+    background-color: #7751e0;
+}
+
+.reportar img {
+    width: 19px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    transition: .3;
+    pointer-events: none;
+    /* Evita que la imagen dentro del botón sea clickable */
+}
+
+.horas__orig {
+    margin-bottom: 20px;
+}
+
+.compartir {
+    color: #5213ff;
+    border: 1px solid #5213ff;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .3s ease;
+    font-size: 1rem;
+    position: relative;
+    top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    /* Añadido para cambiar el cursor */
+}
+
+.compartir:hover {
+    color: #fff;
+    background-color: #5213ff;
+}
+
+.compartir img {
+    width: 19px;
+    position: relative;
+    top: 2px;
+    transition: .3;
+    pointer-events: none;
+    /* Evita que la imagen dentro del botón sea clickable */
+}
+
+.compartir:hover>img {
+    filter: brightness(100);
+}
+
+.de__orig,
+.a__orig {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.color__hora__orig {
+    color: #5213ff;
+}
+
+.container__cont__orig {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px !important;
+    padding-top: 0;
+    margin-top: -20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.telefono__orig {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.ID__orig {
+    color: #444;
+}
+
+.info__orig {
+    margin-bottom: 20px;
+}
+
+.info__orig span {
+    margin-right: 5px;
+    font-size: 0.9rem;
+    color: #666 !important;
+}
+
+.titulo__orig {
+    text-align: left;
+    font-size: 2.2rem;
+    color: #333;
+    margin: 20px 0;
+}
+
+.titlesex__orig {
+    text-align: left;
+    font-size: 1.3rem;
+    color: #333;
+    margin: 20px 0;
+}
+
+.foto__orig {
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px #000000;
+    transition: transform 0.3s ease;
+}
+
+.descripcion__orig {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.precio__orig {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #5213ff;
+    margin-bottom: 10px;
+}
+
+.precio__orig span {
+    color: rgb(74, 74, 74);
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+.capacidad__orig,
+.servicios__orig,
+.tipoServicio__orig {
+    margin-bottom: 40px;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media(max-width:359px) {
+    .contratar__orig {
+        display: block;
+        width: fit-content;
+        margin-bottom: 5px;
+    }
+
+    .reportar,
+    .compartir {
+        margin: 0;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:373px) {
+    .subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container__cont__orig {
+        padding: 10px;
+    }
+
+    .titulo__orig {
+        font-size: 2rem;
+    }
+
+    .foto__orig {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/* Estilo para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    /* Cambia el cursor */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#modalCompartir {
+    text-align: center;
+}
+
+#modalCompartir .modal-content {
+    max-width: 400px;
+}
+
+#modalCompartir h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+}
+
+#modalCompartir img {
+    width: 55px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 1px solid var(--color-title);
+    border-radius: 5px;
+}
+
+/* Estilo para el modal de reportar */
+
+
+#modalReportar .modal-content {
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 25px auto;
+}
+
+#modalReportar .modal-content form {
+    text-align: left;
+    background: #fff;
+}
+
+.subtitle span {
+    color: var(--color-title) !important;
+}
+
+.modal-content .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: #444;
+    text-align: center;
+}
+
+#modalReportar .modal-content span {
+    color: #333;
+    font-weight: 600;
+}
+
+#modalReportar .modal-content form.reportar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#modalReportar .modal-content form.reportar label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #444;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+/* Estilo personalizado para checkboxes */
+#modalReportar .modal-content form.reportar input[type="checkbox"] {
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #5213ff;
+    border-radius: 4px;
+    position: relative;
+    transition: .3s ease;
+}
+
+#modalReportar .modal-content form.reportar input[type="checkbox"]:hover {
+    border: 1px solid #8052ff;
+}
+
+#modalReportar .modal-content form.reportar input[type="checkbox"]:checked {
+    background-color: #fff;
+}
+
+#modalReportar .modal-content form.reportar input[type="checkbox"]:checked::after {
+    content: '✔️';
+    font-size: .8rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#modalReportar .modal-content form.reportar input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #5213ff;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    color: #444;
+    outline: none;
+    resize: vertical;
+    transition: .3s;
+}
+
+#modalReportar .modal-content form.reportar input[type="text"]:hover,
+#modalReportar .modal-content form.reportar input[type="text"]:focus {
+    border-color: #8466d7;
+}
+
+#modalReportar .modal-content form.reportar button {
+    border: none;
+    background-color: #5213ff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 10px;
+}
+
+#modalReportar .modal-content form.reportar button:hover {
+    background-color: #7751e0;
+}
+
+.reporte,
+.hecho {
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hecho {
+    display: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    background-color: #5213ff;
+}
+
+#modalReportar .modal-content img {
+    width: 90px;
+    display: block;
+    margin: 20px auto;
+}
+
+#enviarReporte {
+    opacity: 0.5;
+    /* Botón inicialmente opaco */
+}
+
+#enviarReporte:hover {
+    background: #5213ff !important;
+    opacity: 0.5 !important;
+}
+
+@media (max-width:425px) {
+    #modalReportar label {
+        font-size: .8rem !important;
+    }
+
+    #modalReportar .subtitle {
+        font-size: 1.2rem !important;
+    }
+}
+
+.interesante .anuncio-container {
+    margin-top: -50px;
+}
+
+#modalAdquirir .modal-content {
+    margin: 0 auto;
+    margin-top: 1.5px;
+    max-width: fit-content;
+    padding: 30px;
+}
+
+#modalAdquirir .modal-content .close {
+    margin-top: -30px;
+    position: relative;
+    left: 20px;
+}
+
+
+.detalles {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    font-weight: 600;
+    text-align: center;
+    color: #444;
+}
+
+.paypal {
+    width: 300px;
+    margin: auto;
+}
+
+
+.datitos {
+    margin: auto;
+}
+
+.datitos-grises {
+    color: #444;
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.datitos-grises .precio {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.datitos-grises strong {
+    font-size: .5rem;
+    font-weight: 700;
+}
+
+.god{
+    width: 90%;
+    margin: auto;
+}
+
+.datos-cliente {
+    margin: auto;
+}
+
+.datos-cliente input {
+    display: block;
+    margin-bottom: 22px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #444;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.detalles-cliente-title {
+    color: #444;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cliente-siguiente {
+    width: fit-content;
+    background: var(--color-title);
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    transition: .3s ease;
+}
+
+.cliente-siguiente:hover {
+    background: var(--color-hover);
+}
+
+.anuncio__interesante {
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.671);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .3s ease;
+    margin-bottom: 20px;
+    margin-top: 20px !important
+}
+
+.anuncio__interesante:hover {
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.877);
+}
+
+@media (max-width:720px) {
+    .box__orig {
+        font-size: 12px;
+    }    
+    .titlesex__orig {
+        font-size: 18px;
+    }
+}
+
+.nav__img {
+    top: 20px !important;
+}
+
+@media (max-width:800px) {
+    .nav__logo img {
+        width: 10rem !important;
+        position: relative;
+        left: -5px !important;
+    }
+}
+
+@media (max-width:600px) {
+    .ID__orig {
+        font-size: .8rem;
+    }
+
+    .edad__orig,
+    .zona__orig,
+    .ciudad__orig,
+    .direccion__orig {
+        font-size: .7rem !important;
+    }
+
+    .titulo__orig {
+        font-size: 1.5rem;
+}
+
+}

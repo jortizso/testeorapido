@@ -1,0 +1,754 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color-text);
+}
+
+:root {
+    --padding-container: 100px 0;
+    --color-title: #5213ff;
+    --color-hover: #7751e0;
+    --color-text: #1f1f1f;
+    --grey: #808080;
+    --color-background: #f5f5f5;
+    --d: 700ms;
+    --e: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+nav {
+    border-bottom: 1px solid var(--grey) !important;
+    padding-top: 10px !important;
+}
+
+nav a {
+    color: var(--grey) !important;
+}
+
+nav a:hover {
+    color: var(--color-hover) !important;
+}
+
+.nav__items .publica {
+    border: 1px solid var(--grey) !important;
+}
+
+.nav__items .publica:hover {
+    border: 1px solid var(--color-hover) !important;
+}
+
+footer nav a {
+    color: #fff !important;
+}
+
+footer nav a:hover {
+    color: #fff !important;
+}
+
+footer nav {
+    border: none !important;
+}
+
+main {
+    padding: 30px 100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.search-container {
+    top: -30px;
+}
+
+.search-container input {
+    color: #808080;
+    border: 1px solid #808080;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Anuncios */
+
+
+.anuncio {
+    padding: 15px;
+    border: 1px solid #0000006d;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .3s ease;
+    margin-bottom: 20px;
+}
+
+.anuncio:hover {
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.877);
+}
+
+.foto {
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 20px;
+}
+
+.encabezado {
+    padding: 0 30px;
+    width: 100%;
+}
+
+.zona,
+.ciudad-barrio {
+    font-size: 13px;
+}
+
+.titulo {
+    text-align: left;
+    color: var(--color-title);
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.datos {
+    display: block;
+    width: 100%;
+}
+
+.datos span,
+.encabezado span {
+    color: #555555 !important;
+}
+
+.anuncio-vip .fa-gem {
+    color: #0062ff !important;
+}
+
+.anuncio-vip .telefono {
+    background-color: #0062ff;
+}
+
+.anuncio-vip .telefono:hover {
+    background-color: #3c6bb7;
+    box-shadow: 0 0 8px #2357aa;
+}
+
+.anuncio-vip {
+    box-shadow: 0 0 6px #134698;
+}
+
+.anuncio-vip:hover {
+    box-shadow: 0 0 8px #0062ff;
+}
+
+.anuncio-vip .titulo {
+    color: #0062ff !important;
+}
+
+.anuncio-vip .edad,
+.anuncio-vip .zona,
+.anuncio-vip .ciudad-barrio {
+    color: #0062ff !important;
+}
+
+.tipo {
+    color: #808080;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.tipo i {
+    color: #808080;
+}
+
+.encabezado i {
+    color: var(--color-title);
+    position: relative;
+    left: 70%;
+}
+
+.anuncio-gold {
+    box-shadow: 0 0 6px #ffbf00;
+}
+
+.anuncio-gold .telefono {
+    background-color: #ffbf00;
+}
+
+.anuncio-gold .telefono:hover {
+    background-color: #e8bf45;
+    box-shadow: 0 0 10px #e2b839;
+}
+
+.anuncio-gold i {
+    color: #ffbf00 !important;
+}
+
+.anuncio-gold .titulo {
+    color: #ffbf00;
+}
+
+.anuncio-gold:hover {
+    box-shadow: 0 0 8px #ffae00;
+}
+
+.anuncio-gold .edad,
+.anuncio-gold .zona,
+.anuncio-gold .ciudad-barrio {
+    color: #b09953 !important;
+}
+
+.tipo {
+    color: #808080;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.encabezado i {
+    color: var(--color-title);
+    position: relative;
+    left: 73%;
+}
+
+/* Filtro de búsqueda */
+
+.modal label {
+    margin-bottom: 30px;
+}
+
+.anuncios {
+    width: 80%;
+    margin: auto;
+}
+
+
+@media (max-width: 1370px) {
+    .anuncios {
+        padding: 20px;
+    }
+
+    .anuncios .fa-gem,
+    .anuncios .fa-crown {
+        left: 650px;
+    }
+}
+
+@media (max-width: 1245px) {
+
+    .anuncios .fa-gem,
+    .anuncios .fa-crown {
+        left: 600px;
+    }
+}
+
+@media (max-width: 1185px) {
+
+    .anuncios .fa-gem,
+    .anuncios .fa-crown {
+        left: 550px;
+    }
+}
+
+@media (max-width: 1116px) {
+
+    .anuncios .fa-gem,
+    .anuncios .fa-crown {
+        left: 500px;
+    }
+}
+
+@media (max-width: 1055px) {
+
+    .anuncios .fa-gem,
+    .anuncios .fa-crown {
+        left: 450px;
+    }
+}
+
+@media (max-width: 895px) {
+
+    .anuncios .fa-gem,
+    .anuncios .fa-crown {
+        left: 400px;
+    }
+}
+
+@media (max-width: 829px) {
+
+    .anuncios .fa-gem,
+    .anuncios .fa-crown {
+        left: 60%;
+    }
+}
+
+@media (max-width: 581px) {
+
+    .anuncios .fa-gem,
+    .anuncios .fa-crown {
+        left: 50%;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .anuncios .fa-gem,
+    .anuncios .fa-crown {
+        left: 38%;
+    }
+}
+
+/* Adaptación a móviles */
+
+@media (max-width: 768px) {
+    main {
+        padding: 20px 10px;
+    }
+
+    .anuncios {
+        width: 100% !important;
+    }
+
+    .anuncio {
+        padding: 10px;
+    }
+
+    .foto {
+        width: 100px;
+        height: 150px;
+        margin-right: 10px;
+    }
+
+    .encabezado {
+        padding: 0 10px;
+    }
+
+    .titulo {
+        font-size: 1rem;
+    }
+
+    .descripcion {
+        font-size: .68rem;
+    }
+
+    .encabezado span,
+    .datos span {
+        font-size: .6rem;
+    }
+
+    .tipo {
+        font-size: 12px;
+    }
+
+    .encabezado i {
+        left: 65%;
+    }
+}
+
+@media (max-width: 650px) {
+    .encabezado i {
+        left: 57%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .encabezado i {
+        left: 54%;
+    }
+}
+
+@media (max-width: 426px) {
+    .encabezado i {
+        left: 50%;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .encabezado i {
+        left: 45%;
+    }
+}
+
+@media (max-width: 365px) {
+    .encabezado i {
+        left: 38%;
+    }
+}
+
+@media (max-width: 490px) {
+    .titulo {
+        font-size: .8rem;
+    }
+
+    .descripcion {
+        font-size: .58rem;
+    }
+
+    .encabezado span,
+    .datos span {
+        font-size: .5rem;
+    }
+
+    .tipo {
+        font-size: 10px;
+    }
+
+    .foto {
+        width: 90px;
+        height: 120px;
+    }
+}
+
+.ciudad__buscar {
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid #808080;
+    transition: ease .3s;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.ciudad__buscar:hover,
+.ciudad__buscar:focus {
+    border-bottom: 1px solid var(--color-hover);
+}
+
+.modal select:hover,
+.modal select:focus {
+    transition: .3s ease;
+    border-left: 1px solid var(--color-hover);
+}
+
+.modal select {
+    margin-bottom: 20px;
+}
+
+.modal-content {
+    margin: auto;
+    margin-top: 70px;
+    max-width: 550px;
+    width: 90%;
+    overflow: hidden;
+}
+
+.search-input {
+    cursor: text;
+    text-align: left !important;
+    padding-left: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    position: absolute;
+    top: 20rem;
+}
+
+@media (max-width:640px) {
+    .no-results {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width:425px) {
+    .no-results {
+        font-size: 1rem;
+        margin-top: 10px;
+
+    }
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.tipo a {
+    color: #808080;
+}
+
+.whatsapp,
+.telegram,
+.telefono {
+    color: #fff;
+    background: #0f0;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.whatsapp i,
+.telegram i,
+.telefono i {
+    position: relative;
+    font-size: 20px;
+    color: #fff !important;
+}
+
+.contacto {
+    text-align: end;
+    /* padding-right: 20px; */
+    /* padding-top: 20px; */
+}
+
+.whatsapp i,
+.telegram i {
+    left: 2px;
+    top: 2px;
+}
+
+.telegram {
+    background-color: #3763ff;
+}
+
+.telefono i {
+    top: 2px;
+}
+
+.telefono {
+    background-color: var(--color-title);
+}
+
+.whatsapp,
+.telegram,
+.telefono {
+    transition: .3s ease;
+}
+
+.whatsapp:hover {
+    background: #00aa00;
+    box-shadow: 0 0 10px #005f00;
+}
+
+.telegram:hover {
+    background: #254bc9;
+    box-shadow: 0 0 10px #0c267c;
+}
+
+.telefono:hover {
+    background: #4c00b6;
+    box-shadow: 0 0 10px #0e005f;
+}
+
+
+@media (max-width: 1025px) {
+    .anuncios {
+        width: 90%;
+    }
+}
+
+@media (max-width:995px) {
+
+    .whatsapp,
+    .telegram,
+    .telefono {
+        position: relative;
+        top: -30px;
+    }
+}
+
+@media (max-width:768px) {
+
+    .whatsapp,
+    .telegram,
+    .telefono {
+        padding: 5px 10px;
+    }
+
+    .whatsapp i,
+    .telegram i,
+    .telefono i {
+        font-size: 17px;
+    }
+}
+
+@media (max-width:500px) {
+    .contacto {
+        padding-right: 0;
+    }
+
+    .whatsapp,
+    .telegram,
+    .telefono {
+        padding: 3px 5px;
+    }
+
+    .whatsapp i,
+    .telegram i,
+    .telefono i {
+        top: -.5px;
+        font-size: 15px;
+    }
+}
+
+.contratar {
+    color: var(--color-title);
+    background-color: #fff;
+    border: 1px solid var(--color-title);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .3s ease;
+    position: relative;
+    top: -20px;
+}
+
+.contratar:hover {
+    color: #fff;
+    background-color: var(--color-title);
+}
+
+.contratar img {
+    width: 19px;
+    position: relative;
+    top: 2px;
+    transition: .3s;
+}
+
+.contratar:hover>img {
+    filter: brightness(100);
+}
+
+@media (max-width:580px) {
+    .contratar {
+        font-size: .8rem;
+        padding: 3px 5px;
+    }
+
+    .contratar img {
+        width: 16px;
+    }
+
+    .filter__text {
+        font-size: .9rem !important;
+    }
+}
+
+.descripcion a {
+    color: #1f1f1f;
+}
+
+.descripcion .ver-mas {
+    color: var(--color-title);
+    transition: .3s ease;
+}
+
+.descripcion .ver-mas:hover {
+    color: var(--color-hover);
+}
+
+
+.anuncio-container {
+    min-height: 200px;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #5d00ff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin .5s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@media(max-width:455px) {
+    .loader {
+        top: 50%;
+        left: 45%;
+    }
+}
+
+@media (max-width:510px) {
+    .anuncios {
+        padding: 0;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .anuncio {
+        margin: auto;
+        margin-bottom: 13px;
+        width: 97%;
+        position: relative;
+        top: -18px;
+    }
+
+    .tipo {
+        position: relative;
+        top: -20px;
+    }
+
+}
+
+
+.nav__img {
+    top: 20px !important;
+}
+
+@media (max-width:800px) {
+    .nav__logo img {
+        width: 10rem !important;
+        position: relative;
+        left: -5px !important;
+    }
+}
+
+
+.filter__text {
+    color: var(--color-hover);
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    top: -30px;
+}
+
+.filter__text a {
+    color: var(--color-hover);
+    transition: .3s ease;
+}
+
+.filter__text a:hover {
+    color: var(--color-title);
+}
+
+.selected {
+    color: #280084 !important;
+    transition: .3s ease;
+}
+
+.selected:hover {
+    color: var(--color-title) !important;
+}
+

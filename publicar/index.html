@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Anuncio</title>
+    <link rel="shortcut icon" href="../assets/images/fuego.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/publicar.css">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<body>
+    <nav class="nav container">
+        <div class="nav__logo">
+            <h2 class="nav__title"><a href="../index.html"><img src="../assets/images/logo2.png" alt="logo"></a></h2>
+        </div>
+
+        <ul class="nav__link nav__link--menu">
+            <li class="nav__items">
+                <a href="../index.html" class="nav__links">Inicio</a>
+            </li>
+            <li class="nav__items">
+                <a href="../escorts/" class="nav__links">Escorts</a>
+            </li>
+            <li class="nav__items">
+                <a href="../index.html#lomejor" class="nav__links">Zonas</a>
+            </li>
+            <li class="nav__items">
+                <a href="../index.html#ExtaZone" class="nav__links">ExtaZone</a>
+            </li>
+            <li class="nav__items">
+                <a href="../index.html#planes" class="nav__links publica">Promociona tu anuncio</a>
+            </li>
+
+            <img src="../assets/images/x.png" class="nav__close">
+        </ul>
+
+        <div class="nav__menu">
+            <img src="../assets/images/menu.png" class="nav__img">
+        </div>
+    </nav>
+
+     <!-- Modal de permisos -->
+    <div id="ageWarningModal_warning" class="modal_warning">
+        <div class="modal-content_warning">
+            <img src="../assets/images/seguro.png" alt="Warning Icon" class="warning-icon_warning">
+            <h4>Al publicar, <span>confirmo que:</span></h4>
+            <ul>
+                <li>
+                    <span>
+                        Actúo bajo mi propio consentimiento.
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        Soy mayor de edad.
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        Mi contenido cumple con la <a href="../legal/politica-de-contenido-y-uso-aceptable.html">Política de Contenido.</a>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        He leído y acepto los <a href="../legal/terminos-y-condiciones.html">Términos y Condiciones.</a>
+                    </span>
+                </li>
+            </ul>
+            <div class="buttons-container_warning">
+                <button class="accept-button_warning" onclick="acceptAgeWarning_warning()">Confirmar</button>
+                <a href="../index.html">
+                    <button class="exit-button_warning">Salir</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="subtitle">Publicar <span>anuncio</span></h1>
+    <form id="adForm" class="publicar__anuncio" method="post" action="../../../backend/validations.php"
+        enctype="multipart/form-data">
+        <label for="zona"></label>
+        <select id="zona" name="zona">
+            <option value="">Seleccione una zona *</option>
+            <option value="Asunción">Asunción</option>
+            <option value="Central">Central</option>
+            <option value="Alto Paraná">Alto Paraná</option>
+        </select><br><br>
+
+        <label for="ciudad"></label>
+        <input type="text" placeholder="Ciudad *" id="ciudad" name="ciudad"><br><br>
+
+        <label for="ciudad"></label>
+        <input type="text" placeholder="Dirección *" id="direccion" name="direccion"><br><br>
+
+        <label for="nombre"></label>
+        <input type="text" placeholder="Nombre o apodo *" id="nombre" name="nombre"><br><br>
+
+        <label for="correo"></label>
+        <input type="email" placeholder="Correo electrónico *" id="correo" name="correo"><br><br>
+
+        <label for="telefono"></label>
+        <input type="text" placeholder="Número de teléfono *" id="telefono" name="telefono"><br><br>
+
+        <label for="edad"></label>
+        <input type="text" placeholder="Edad *" id="edad" name="edad"><br><br>
+
+        <input type="text" name="tarifa" id="tarifa" placeholder="Tarifa por hora *">
+
+        <label for="titulo"></label>
+        <input type="text" placeholder="Escribe un título claro y breve *" id="titulo" name="titulo"><br><br>
+
+        <label for="descripcion"></label>
+        <textarea id="descripcion" placeholder="Escribe una descripción clara *" name="descripcion"></textarea><br><br>
+
+        <div class="option__title">
+            <h2>Servicios *</h2>
+        </div>
+        <div class="servicios selecciones">
+            <div class="oral seleccionable" id="Oral">Oral</div>
+            <div class="vaginal seleccionable" id=" Vaginal">Vaginal</div>
+            <div class="anal seleccionable" id=" Anal">Anal</div>
+            <div class="fetiches seleccionable" id="Fetiches">Fetiches</div>
+            <div class="roles seleccionable" id=" Roles y fantasías">Roles y fantasías</div>
+            <div class="acompañamiento seleccionable" id=" Acompañamiento social">Acompañamiento social</div>
+        </div>
+
+        <div class="option__title">
+            <h2>Acepto a *</h2>
+        </div>
+        <div class="aceptoA selecciones">
+            <div class="hombres seleccionable" id="Hombres">Hombres</div>
+            <div class="mujeres seleccionable" id=" Mujeres">Mujeres</div>
+            <div class="mujeres seleccionable" id=" Parejas">Parejas</div>
+            <div class="discapacitados seleccionable" id=" Discapacitados">Discapacitados</div>
+        </div>
+
+        <div class="option__title">
+            <h2>Límite de participantes *</h2>
+        </div>
+        <div class="capacidad selecciones">
+            <div class="individual seleccionable" id="Individual">Individual</div>
+            <div class="duo seleccionable" id=" Dúo">Dúo</div>
+            <div class="trio seleccionable" id=" Trío">Trío</div>
+            <div class="grupos seleccionable" id=" Grupos">Grupos</div>
+        </div>
+
+        <div class="option__title">
+            <h2>Horario de disponibilidad *</h2>
+        </div>
+        <div class="hora">De
+            <input type="text" name="hora" id="hora" placeholder="00:00"> a
+            <input type="text" name="hora2" id="hora2" placeholder="00:00">
+        </div>
+        <div class="horario selecciones">
+            <div class="Lunes seleccionable" id="Lunes">Lunes</div>
+            <div class="martes seleccionable" id=" Martes">Martes</div>
+            <div class="miercoles seleccionable" id=" Miércoles">Miércoles</div>
+            <div class="jueves seleccionable" id=" Jueves">Jueves</div>
+            <div class="viernes seleccionable" id=" Viernes">Viernes</div>
+            <div class="sabado seleccionable" id=" Sábado">Sábado</div>
+            <div class="domingo seleccionable" id=" Domingo">Domingo</div>
+        </div>
+
+        <div class="option__title">
+            <h2>Tipo de servicio *</h2>
+        </div>
+        <div class="servicio-tipo selecciones">
+            <div class="domicilio seleccionable" id="Domicilio">A domicilio</div>
+            <div class="salidas seleccionable" id=" Local">Para salidas</div>
+            <div class="local seleccionable" id=" Local">En local propio</div>
+        </div>
+
+        <div id="map-container"></div>
+        <p id="ubicacion-mensaje">Te consultaremos antes de proporcionar tu ubicación a un
+            cliente</p>
+        <div id="ubicacion-manual">
+            <input type="text" id="ubicacion-url" placeholder="O pega la URL de tu ubicación">
+        </div>
+        <section class="drop">
+            <div class="drop-zone">
+                <div class="imagen__foto">
+                    <img id="placeholder-image" src="../assets/images/image.png" alt="imagen">
+                </div>
+                <span class="drop-zone__prompt">Soltá tu foto o haz clic para subir</span>
+                <span class="drop-zone__prompt__cel">Tocá para subir una foto</span>
+                <input type="file" id="imagen" name="imagen" class="drop-zone__input" accept=".jpg, .jpeg, .png">
+            </div>
+            <p class="una__fotoV">Una única foto por anuncio estándar</p>
+        </section>
+        <label class="custom-checkbox-container">
+            <input type="checkbox" id="terminos" name="terminos">
+            <span class="checkmark"></span>
+            <span class="custom-checkbox-label">Acepto los <a href="../legal/terminos-y-condiciones.html">términos y
+                    condiciones</a></span>
+        </label><br><br>
+        <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lc1O-spAAAAAMxeGD4SimE9dgCUlMxw8PdMvmsr"></div>
+        <button type="submit" class="publicar-anuncio-button">Publicar</button>
+        <div id="messageContainer"></div>
+    </form>
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <a href="../index.html">
+                    <img class="footer__title" src="../assets/images/logo.png" alt="logo">
+                </a>
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="../index.html" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="../legal/terminos-y-condiciones.html" class="nav__links">Términos y Condiciones </a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="../legal/politica-de-privacidad.html" class="nav__links">Política de Privacidad</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="../legal/politica-de-comisiones-y-pagos.html" class="nav__links">Política de Comisiones
+                            y Pagos</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="../legal/politica-de-contenido-y-uso-aceptable.html" class="nav__links">Política de
+                            Contenido y Uso Aceptable</a>
+                    </li>
+                    <li class="nav../__items">
+                        <a href="../legal/descargo-de-responsabilidad.html" class="nav__links">Descargo de
+                            Responsabilidad</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="mailto:contacto@extasis.com.py" class="nav__links">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="metodos__pago">
+                <img src="../assets/images/rta.png" alt="RTA">
+            </div>
+        </section>
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a target="_blank" href="https://instagram.com/extasis__py" class="footer__icons"><img src="../assets/images/instagram.png" class="footer__img"></a>
+                <a target="_blank" href="https://wa.me/595983293074" class="footer__icons"><img src="../assets/images/whatsapp.png" class="footer__img"></a>
+                <a target="_blank" href="mailto:contacto@extasis.com.py" class="footer__icons"><img src="../assets/images/telegram.png"
+                        class="footer__img"></a>
+            </div>
+            <h3 class="footer__copyright">&copy; 2024 Éxtasis</h3>
+        </section>
+    </footer>
+
+    <script type="module" src="../assets/js/publicar-estandar.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/warningModalAnuncio.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('adForm');
+
+            form.addEventListener('submit', function (event) {
+                var requiredFields = form.querySelectorAll(':required');
+                var firstIncompleteField = null;
+
+                requiredFields.forEach(function (field) {
+                    if (!field.value.trim()) { // Verificar si el campo está vacío
+                        if (!firstIncompleteField) {
+                            firstIncompleteField = field;
+                        }
+                    }
+                });
+
+                if (firstIncompleteField) {
+                    event.preventDefault(); // Prevenir el envío del formulario
+
+                    // Hacer scroll hacia el primer campo incompleto
+                    firstIncompleteField.focus({ preventScroll: false });
+                    firstIncompleteField.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

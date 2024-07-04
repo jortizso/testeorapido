@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+    <link rel="stylesheet" href="../assets/css/escortss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="../assets/images/fuego.png" type="image/x-icon">
+    <title>Éxtasis | Escorts</title>
+</head>
+
+<body>
+
+    <nav class="nav container">
+        <div class="nav__logo">
+            <h2 class="nav__title"><a href="../index.html"><img src="../assets/images/logo2.png" alt="logo"></a></h2>
+        </div>
+
+        <ul class="nav__link nav__link--menu">
+            <li class="nav__items">
+                <a href="../index.html" class="nav__links">Inicio</a>
+            </li>
+            <li class="nav__items">
+                <a href="../escorts/" class="nav__links">Escorts</a>
+            </li>
+            <li class="nav__items">
+                <a href="../index.html#lomejor" class="nav__links">Zonas</a>
+            </li>
+            <li class="nav__items">
+                <a href="../index.html#ExtaZone" class="nav__links">ExtaZone</a>
+            </li>
+            <li class="nav__items">
+                <a href="../publicar/" class="nav__links publica">Publica tu anuncio</a>
+            </li>
+
+            <img src="../assets/images/x.png" class="nav__close">
+        </ul>
+
+        <div class="nav__menu">
+            <img src="../assets/images/menu.png" class="nav__img">
+        </div>
+    </nav>
+
+    <main class="anuncios">
+        <h1>Las mejores escorts del <span>Paraguay</span></h1>
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="Buscar.." oninput="filterResults()">
+        </div>
+            <h2 class="filter__text"><a href="central/">Central</a> | <a href="asuncion/">Asunción</a> | <a href="altoparana/">Alto Paraná</a></h2>
+        <!-- <span id="diamante" class="tipo"><a href="#diamante"><i class="fas fa-gem"></i> Anuncios ultra vip</a></span> -->
+        <span id="estandar" class="tipo"><a href="#estandar"><i class="fas fa-check"></i> Anuncios estándar</a></span>
+        <div class="anuncio-container" id="anuncio-container">
+            <!-- Anuncios estándar se agregarán aquí -->
+        </div>
+        <div id="noResults" class="no-results hidden"><span>Lo sentimos,</span> no hemos encontrado resultados para tu
+            búsqueda.</div>
+    </main>
+    <div class="loader" id="loader"></div>
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <a href="../index.html">
+                    <img class="footer__title" src="../assets/images/logo.png" alt="logo">
+                </a>
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="../index.html" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="../legal/terminos-y-condiciones.html" class="nav__links">Términos y Condiciones</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="../legal/politica-de-privacidad.html" class="nav__links">Política de Privacidad</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="../legal/politica-de-comisiones-y-pagos.html" class="nav__links">Política de Comisiones
+                            y Pagos</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="../legal/politica-de-contenido-y-uso-aceptable.html" class="nav__links">Política de
+                            Contenido y Uso Aceptable</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="../legal/descargo-de-responsabilidad.html" class="nav__links">Descargo de
+                            Responsabilidad</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="mailto:hola@extasis.com.py" class="nav__links">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="metodos__pago">
+                <img src="../assets/images/rta.png" alt="RTA">
+            </div>
+        </section>
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a target="_blank" href="https://instagram.com/extasis__py" class="footer__icons"><img src="../assets/images/instagram.png" class="footer__img"></a>
+                <a target="_blank" href="https://wa.me/595983293074" class="footer__icons"><img src="../assets/images/whatsapp.png" class="footer__img"></a>
+                <a target="_blank" href="mailto:contacto@extasis.com.py" class="footer__icons"><img src="../assets/images/telegram.png"
+                        class="footer__img"></a>
+            </div>
+            <h3 class="footer__copyright">&copy; 2024 Éxtasis</h3>
+        </section>
+    </footer>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/buscador.js"></script>
+    <script type="module" src="../assets/js/escorts.js"></script>
+</body>
+
+</html>

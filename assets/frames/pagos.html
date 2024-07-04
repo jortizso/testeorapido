@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos</title>
+    <style>
+        body {
+            background: rgba(0, 0, 0, 0);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .carrusel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            scrollbar-width: none;
+            align-items: center;
+        }
+
+        @media (min-width: 620px) {
+            .carrusel {
+                gap: 20px;
+                justify-content: center;
+            }
+        }
+
+        .carrusel img {
+            width: 150px;
+            height: fit-content;
+            margin-right: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .carrusel .ueno,
+        .carrusel .tigoMoney {
+            width: 90px;
+            border-radius: 10px;
+        }
+
+        .carrusel .personal {
+            position: relative;
+            right: 10px;
+            width: 130px;
+        }
+
+        .carrusel .claro {
+            position: relative;
+            right: 20px;
+        }
+
+        hr {
+            width: 90%;
+        }
+
+        @media (max-width: 845px) {
+            .carrusel img {
+                width: 100px;
+            }
+
+            .carrusel .ueno,
+            .carrusel .tigoMoney {
+                width: 70px;
+            }
+
+            .carrusel .personal {
+                width: 103px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .carrusel img {
+                width: 80px;
+            }
+
+            .carrusel .ueno,
+            .carrusel .tigoMoney {
+                width: 50px;
+            }
+
+            .carrusel .personal {
+                width: 70px;
+            }
+            
+            .carrusel .claro {
+                width: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+    <section class="carrusel" id="carrusel">
+        <img src="../images/visa.png" alt="visa">
+        <img src="../images/mastercard.jpg" alt="mastercard">
+        <img class="ueno" src="../images/ueno.png" alt="ueno">
+        <img class="tigoMoney" src="../images/tigomoney.png" alt="tigoMoney">
+        <img class="personal" src="../images/personal.png" alt="personalPay">
+        <img class="claro" src="../images/claro.png" alt="girosClaro">
+    </section>
+    <hr>
+    <script src="../js/slider.js"></script>
+</body>
+
+</html>

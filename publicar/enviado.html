@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/fuego.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+    <title>Anuncio Enviado</title>
+    <style>
+        body {
+            font-family: Poppins;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 50px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(43, 43, 43, 0.858);
+            text-align: center;
+            max-width: 80%;
+            width: 600px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        p {
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        .container .check {
+            max-width: 150px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                max-width: 90%;
+                width: 90%;
+                /* padding: 20px; */
+            }
+
+            .container h1 {
+                font-size: 2rem;
+            }
+
+            .container p {
+                font-size: 1rem;
+            }
+
+            .container .check {
+                width: 120px;
+                margin: 0;
+            }
+
+            .logo__fuego {
+                padding: 0;
+            }
+        }
+
+        @media only screen and (max-width: 460px) {
+            .container h1 {
+                font-size: 1.6rem;
+            }
+        }
+
+        .logo__fuego {
+            display: block;
+            max-width: 50px;
+            width: 50px;
+            top: -20px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../index.html">
+            <img class="logo__fuego" src="../assets/images/fuego.png" alt="logo">
+        </a>
+        <img class="check" src="../assets/images/controlar.png" alt="check">
+        <h1>Anuncio <span>enviado</span></h1>
+        <p>
+            Tu anuncio ha sido enviado con éxito a revisión. Nuestro equipo lo revisará cuidadosamente y lo publicará
+            tan pronto sea posible. Te notificaremos por correo electrónico una vez que esté disponible.
+        </p>
+    </div>
+</body>
+
+</html>
